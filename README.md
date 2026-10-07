@@ -98,6 +98,11 @@ The runtime has no third-party dependencies. Development tools are explicitly pi
 review and refresh those pins periodically. Static scans do not constitute a security
 audit or prove that a future cloud integration is safe.
 
+CI uses the explicit Ubuntu 24.04 runner image and SHA-pinned, Node.js 24-based
+checkout/setup-python actions. Checkout does not persist Git credentials.
+Review runner support and action pins periodically rather than relying on
+automatic `ubuntu-latest` migrations.
+
 ## Secure GitOps integration roadmap
 
 See [architecture and staged GitOps delivery](docs/architecture.md), the
